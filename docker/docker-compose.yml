@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  rce:
+    container_name: rce
+    build:
+      dockerfile: dockerfile
+      context: ./rce
+    ports:
+      - "8080:8888"
