@@ -1,0 +1,16 @@
+# 基础镜像
+FROM  jre:9
+# author
+MAINTAINER taojiacheng
+# 环境变量
+ENV WORK_PATH /home/rce
+# 挂载目录
+VOLUME $WORK_PATH
+# 创建目录
+RUN mkdir -p $WORK_PATH
+# 指定路径
+WORKDIR $WORK_PATH
+# 复制jar文件到路径
+COPY ./jar/*.jar $WORK_PATH/rce.jar
+# 启动认证服务
+ENTRYPOINT ["java","-jar","rce.jar"]
