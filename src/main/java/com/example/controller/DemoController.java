@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @GetMapping("/world")
-    public User helloWorld(String name) {
-        User user = new User();
-        user.setName(name);
+    public User helloWorld(User user) {
         return user;
     }
 

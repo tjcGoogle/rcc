@@ -1,5 +1,5 @@
 # 基础镜像
-FROM  jre:9
+FROM openjdk:9-jdk
 # author
 MAINTAINER taojiacheng
 # 环境变量
