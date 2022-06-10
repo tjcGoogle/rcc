@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 20
+      max-lifetime: 5000
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.4.54.91:3306/ant1?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
+    username: root
+    password: doyi1206
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*Mapper.xml
